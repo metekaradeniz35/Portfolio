@@ -8,13 +8,49 @@ body {
 #title {
   color: white;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
-#parag {
+
+.agrobot {
   color: white;
   text-align: center;
-  font-size: 20px;
+  border: 1px solid #a367b1;
+  width: 300px;
+  height: 300px;
+  margin-left: 300px;
+}
+
+.meditrack {
+    color: white;
+    text-align: center;
+    border: 1px solid #a367b1;
+    width: 300px;
+    height: 300px;
+    margin-left: 300px;
+}
+
+.teknofest {
+  display: flex;
+}
+
+
+.tubitak {
+  display: grid;
+  place-items: center;
+}
+
+.tarimbot {
+  color: white;
+  text-align: center;
+  border: 1px solid #a367b1;
+  width: 300px;
+  height: 300px;
+
+}
+
+#text {
+  font-family: sans-serif;
 }
 
 #arrow {
@@ -25,4 +61,26 @@ body {
   color: white;
   font-size: 35px;
   cursor: pointer;
+}
+
+.limitlessWolves {
+  color: white;
+  text-align: center;
+  border: 1px solid #a367b1;
+  width: 300px;
+  height: 300px;
+  margin-left: 300px;
+}
+
+.wanderlust {
+  color: white;
+  text-align: center;
+  border: 1px solid #a367b1;
+  width: 300px;
+  height: 300px;
+  margin-left: 300px;
+}
+
+.fllExperiences {
+  display: flex;
 }
