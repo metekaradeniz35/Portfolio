@@ -14,11 +14,12 @@
     <title>About myself</title>
   </head>
   <body>
+  <div class="container">
     <div class="navbar">
-      <button id="navbarButtons">Home</button>
-      <button id="navbarButtons">About</button>
-      <button id="navbarButtons">Projects</button>
-      <button id="navbarButtons">Contacts</button>
+      <button id="navbarButtons" id="home">Home</button>
+      <button id="navbarButtons" id="about">About</button>
+      <button id="navbarButtons" id="projects" onclick="scrollToTarget(1)">Projects</button>
+      <button id="navbarButtons" id="contacts" onclick="scrollToTarget(2)">Contacts</button>
       <a href=""
         ><button id="githubButton"><i class="fa-brands fa-github"></i></button
       ></a>
@@ -33,7 +34,7 @@
         <br />From there i want to be a succesful programmer in the future.
       </p>
       <a
-        href="index2.html"
+        href="learnmore.vercel.app"
       >
         <button id="learnMore">Learn More</button>
       </a>
@@ -111,5 +112,39 @@
         <!--? Contact Secton ending-->
       </div>
     </div>
+  </div>
+
+  <script>
+    function scrollToTarget(i) {
+      if(i==1){
+        targetPosition = 600;
+      } else if(i==2) {
+        targetPosition = 865;
+      }
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 1000; // 1 saniyede kaydır
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const percentage = Math.min(progress / duration, 1);
+                const ease = easeInOutQuad(percentage);
+
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            function easeInOutQuad(t) {
+                return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+            }
+
+            window.requestAnimationFrame(step);
+        } 
+  </script>
   </body>
 </html>
